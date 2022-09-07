@@ -26,10 +26,6 @@ export const AddCategory = ({onAddCategory}) => {
                 value={category}
             />
 
-            <button
-                type="submit"
-            >Add category</button>
-
         </form>
     )
 }
