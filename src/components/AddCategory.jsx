@@ -19,6 +19,7 @@ export const AddCategory = ({onAddCategory}) => {
 
     return (
         <form
+            aria-label="form"
             onSubmit={handleSubmit}
         >
             <input

@@ -9,4 +9,15 @@ describe('tests in <AddCategory />',()=>{
         fireEvent.input(input, { target: { value: text}});
         expect(input.value).toBe(text);
     });
+
+    test('on submit form should execute handleSubmit function', ()=>{
+        const text = 'Wicked';
+        render(<AddCategory onAddCategory={()=>{}} />);
+        const input = screen.getByRole('textbox');
+        const form = screen.getByRole('form');
+        fireEvent.input(input, { target: { value: text}});
+        fireEvent.submit(form);
+        expect(input.value).toBe('');
+
+    });
 });
